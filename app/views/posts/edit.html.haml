@@ -1,5 +1,5 @@
-%h1 Editing post
+%div{:data => {:role => "header"}}
+  %h1 Editing post
 
-= render 'form'
-
-= link_to "Cancel", :back
+%div{:data => {:role => "content"}}
+  = render 'form'

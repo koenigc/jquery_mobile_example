@@ -1,8 +1,8 @@
-%p
-  %strong Title:
-  = @post.title
-%p
-  %strong Body:
+%div{:data => {:role => "header"}}
+  %h1= @post.title
+  = link_to 'Home', posts_url, "class" => "ui-btn-right"
+
+%div{:data => {:role => "content"}}
   = @post.body
 
-= link_to 'Edit', edit_post_path(@post)
+
