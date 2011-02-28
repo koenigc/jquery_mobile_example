@@ -1,0 +1,8 @@
+%p
+  %strong Title:
+  = @bookmark.title
+%p
+  %strong Body:
+  = @bookmark.body
+
+= link_to 'Edit', edit_bookmark_path(@bookmark)

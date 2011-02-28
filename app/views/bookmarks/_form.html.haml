@@ -1,0 +1,15 @@
+= simple_form_for(@bookmark) do |f|
+  - if @bookmark.errors.any?
+    #error_explanation
+      %h2 #{pluralize(@bookmark.errors.count, "error")} prohibited this bookmark from being saved:
+
+      %ul
+        - @bookmark.errors.full_messages.each do |msg|
+          %li= msg
+
+  .inputs
+    = f.input :title
+    = f.input :body
+    
+  .actions
+    = f.button :submit

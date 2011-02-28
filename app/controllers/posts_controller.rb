@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  layout "jquery_mobile"
+  
   # GET /posts
   # GET /posts.xml
   def index
