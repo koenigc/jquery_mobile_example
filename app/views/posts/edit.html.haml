@@ -1,5 +1,8 @@
-%div{:data => {:role => "header"}}
-  %h1 Editing post
+- content_for :header do
+  %h1 Edit post
 
-%div{:data => {:role => "content"}}
-  = render 'form'
+- content_for :footer do
+  = link_to "Cancel", post_path(@post), :rel => "external", 'data-icon' => 'delete', 'data-role' => 'button'
+
+
+= render 'form'

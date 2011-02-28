@@ -1,8 +1,10 @@
-%div{:data => {:role => "header"}}
+- content_for :header do
   %h1= @post.title
-  = link_to 'Home', posts_url, "class" => "ui-btn-right"
 
-%div{:data => {:role => "content"}}
-  = @post.body
+- content_for :footer do
+  = link_to 'Edit', edit_post_path(@post), 'data-icon' => 'gear', 'data-role' => 'button'
+  = link_to 'Delete', post_path(@post), :method => :delete, :confirm => "realy delete?", 'data-icon' => 'delete'
 
 
+%h1= @post.title
+%p= @post.body

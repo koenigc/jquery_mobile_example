@@ -1,12 +1,13 @@
-%div{:data => {:role => "header"}}
+- content_for :header do
   %h1 Listing posts
-  = link_to 'Add', new_post_path, "data-icon" => "plus", "class" => "ui-btn-right"
+
+- content_for :footer do
+  = link_to 'New post', new_post_path, 'data-icon' => 'plus', 'data-role' => 'button'
 
 
-%div{:data => {:role => "content"}}
-  %ul{"data-role" => "listview"}
-    - @posts.each do |post|
-      %li
-        = link_to post.title, post
-        = link_to 'edit post', edit_post_url(post), "data-icon" => "gear"
-        
+%ul{:data => {:role => "listview"}}
+  - @posts.each do |post|
+    %li
+      = link_to post.title, post
+      = link_to 'edit post', edit_post_path(post), 'data-icon' => 'gear'
+      

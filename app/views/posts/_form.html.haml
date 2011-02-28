@@ -1,15 +1,7 @@
-= simple_form_for(@post) do |f|
-  - if @post.errors.any?
-    #error_explanation
-      %h2 #{pluralize(@post.errors.count, "error")} prohibited this post from being saved:
-
-      %ul
-        - @post.errors.full_messages.each do |msg|
-          %li= msg
-
+= simple_form_for(@post) do |form| 
   .inputs
-    = f.input :title
-    = f.input :body
+    = form.input :title
+    = form.input :body
     
   .actions
-    = f.button :submit
+    = form.button :submit, 'data-icon' => 'check'
