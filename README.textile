@@ -1,0 +1,7 @@
+h1. jQuery Mobile Example App
+
+This is the example application from my "jQuery Mobile":http://devteam.sales-lentz.lu/10minutes/jquery-mobile.html post.
+
+It gives a short overview about "jQuery Mobile":http://jquerymobile.com and it should demonstrate how easy it can be used with Rails3.
+
+I developed this app during my "10 Minutes on Rails":http://devteam.sales-lentz.lu/10minutes.html talks at "Sales-Lentz::DevTeam":http://devteam.sales-lentz.lu/.
